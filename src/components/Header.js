@@ -10,4 +10,6 @@ export default function Header() {
 
 const StyledHeader = styled.h1`
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
 `;

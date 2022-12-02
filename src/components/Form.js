@@ -39,5 +39,6 @@ const StyledForm = styled.form`
   left: 0;
   bottom: 0;
   width: 100%;
-  margin: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 `;

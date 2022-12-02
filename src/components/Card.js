@@ -2,32 +2,26 @@ import styled from "styled-components";
 
 export default function Card({ thoughts, author }) {
   return (
-    <section>
+    <StyledSection>
       <p>{thoughts}</p>
       <span>{author}</span>
-    </section>
+    </StyledSection>
   );
 }
 
-{
-  /* <StyledSection>
-  <StyledContent></StyledContent>
-</StyledSection>;
 const StyledSection = styled.section`
-  section {
-    display: flex;
-  }
-`;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 3px 3px 5px 5px silver;
 
-const StyledContent = styled.content`
-  div {
-    align-self: center;
-  }
   p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
   }
   span {
-    font-family: Arial, Helvetica, sans-serif;
+    color: red;
   }
-`; */
-}
+`;
