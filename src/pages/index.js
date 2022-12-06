@@ -14,17 +14,27 @@ export default function HomePage() {
     setEntries(entries.filter((entry) => entry.id !== id));
   }
 
-  console.log(entries);
+  function handleChange(id, thoughts, author) {
+    setEntries(
+      entries.map((entry) => {
+        if (entry.id === id) return { ...entry, thoughts, name: author };
+        return entry;
+      })
+    );
+  }
+
   return (
     <>
       <Header />
       {entries.map((entry) => {
         return (
           <Card
+            id={entry.id}
             key={entry.id}
             thoughts={entry.thoughts}
             author={entry.name}
             onDeleteEntry={() => handleDelete(entry.id)}
+            onChange={handleChange}
           />
         );
       })}
